@@ -13,6 +13,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
+@Table(name = "\"Worker_Jobs\"")
 public class WorkerJobs {
 
     @Id
@@ -27,7 +28,7 @@ public class WorkerJobs {
     private Date jobEndDate;
 
     @Column(name = "salary")
-    private Integer salary;
+    private Double salary;
 
     @Column(name = "contract_type_id")
     private Integer contractTypeId;

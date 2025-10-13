@@ -13,6 +13,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
+@Table(name = "\"Worker_Info\"")
 public class WorkerInfo {
 
     @Id
