@@ -13,13 +13,17 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-@Table(name = "\"Worker_Jobs\"")
+@Table(name = "worker_jobs")
 public class WorkerJobs {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "worker_id")
-    private Integer workerId;
+    @Column(name = "job_id")
+    private Integer jobId;
+
+    @ManyToOne
+    @JoinColumn(name = "worker_id", referencedColumnName = "worker_id")
+    private WorkerInfo workerInfo;
 
     @Column(name = "job_start_date")
     private Date jobStartDate;
